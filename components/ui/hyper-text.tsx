@@ -35,7 +35,7 @@ const getRandomInt = (max: number): number => Math.floor(Math.random() * max);
 export default function HyperText({
   children,
   className,
-  duration = 500,
+  duration = 800,
   delay = 0,
   as: Component = "div",
   startOnView = false,
@@ -94,11 +94,10 @@ export default function HyperText({
   useEffect(() => {
     if (!isAnimating) return;
 
-    const intervalDuration = duration / (children.length * 2);
-    const maxIterations = children.length;
-
+    const totalIterations = children.length;
+    const intervalDuration = duration / totalIterations; // Proportional to total iterations
     const interval = setInterval(() => {
-      if (iterationCount.current < maxIterations) {
+      if (iterationCount.current < totalIterations) {
         setDisplayText((currentText) =>
           currentText.map((letter, index) =>
             letter === ""
@@ -108,8 +107,9 @@ export default function HyperText({
                 : characterSet[getRandomInt(characterSet.length)]
           )
         );
-        iterationCount.current = iterationCount.current + 0.1;
+        iterationCount.current += 1; // Increment by whole numbers
       } else {
+        setDisplayText(children.split("")); // Ensure the final text is correct
         setIsAnimating(false);
         clearInterval(interval);
       }
