@@ -6,9 +6,10 @@ import { Providers } from "./providers";
 
 import { DockComponent } from "@/components/Dock";
 import Footer from "@/components/Footer";
-import FlickeringGrid from "@/components/ui/flickering-grid";
 import { fontSans } from "@/config/fonts";
 import { siteConfig } from "@/config/site";
+
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: {
@@ -45,6 +46,8 @@ export default function RootLayout({
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
           <div className="relative flex flex-col h-screen">
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
+              <Analytics />
+
               {children}
             </main>
 
