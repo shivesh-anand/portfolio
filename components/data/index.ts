@@ -14,12 +14,12 @@ export const skills = [
   {
     name: "Next.js",
     icon: "https://res.cloudinary.com/dxiy3slnd/image/upload/v1735026571/portfolio/nextjs-icon_h5uqhw.svg",
-    level: "Advanced",
+    level: "Intermediate",
   },
   {
     name: "React.js",
     icon: "https://res.cloudinary.com/dxiy3slnd/image/upload/v1735026571/portfolio/react-js-icon_qcdrwe.svg",
-    level: "Advanced",
+    level: "Intermediate",
   },
   {
     name: "Node.js",
@@ -44,12 +44,12 @@ export const skills = [
   {
     name: "Javascript",
     icon: "https://res.cloudinary.com/dxiy3slnd/image/upload/v1735026569/portfolio/javascript-programming-language-icon_ayohck.svg",
-    level: "Advanced",
+    level: "Intermediate",
   },
   {
     name: "Typescript",
     icon: "https://res.cloudinary.com/dxiy3slnd/image/upload/v1735026569/portfolio/typescript-programming-language-icon_nq0ums.svg",
-    level: "Advanced",
+    level: "Intermediate",
   },
 ];
 
