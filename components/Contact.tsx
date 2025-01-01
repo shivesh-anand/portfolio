@@ -14,7 +14,7 @@ function Contact() {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
-    const text = "theshiveshanand@gmail.com";
+    const text = "theshiveshanand.official@gmail.com";
 
     navigator.clipboard.writeText(text);
     setCopied(true);
